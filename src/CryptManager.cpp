@@ -615,7 +615,7 @@ void CryptManager::TRDecrypt(unsigned char *Data, unsigned int Len)
 	sub_A7E190_1(Data, Len, 0);
 }
 
-int __cdecl CryptManager::TRPrepareBasic(unsigned __int8 *Output, unsigned __int8 *Input)
+int  CryptManager::TRPrepareBasic(unsigned __int8 *Output, unsigned __int8 *Input)
 {
 	int result;
 	signed int v3;
@@ -666,7 +666,7 @@ int __cdecl CryptManager::TRPrepareBasic(unsigned __int8 *Output, unsigned __int
 	return result;
 }
 
-void __cdecl CryptManager::TRKeyIntegrate(unsigned char *Key)
+void CryptManager::TRKeyIntegrate(unsigned char *Key)
 {
 	// fsdf optimize this!
 	int result;
@@ -718,7 +718,7 @@ void __cdecl CryptManager::TRKeyIntegrate(unsigned char *Key)
 	}
 }
 
-void __cdecl CryptManager::TRKeyIntegrate2()
+void  CryptManager::TRKeyIntegrate2()
 {
 	int v0;
 	signed int v1;
@@ -738,7 +738,7 @@ void __cdecl CryptManager::TRKeyIntegrate2()
 	}
 }
 
-int __cdecl CryptManager::TRKeyIntegrate3()
+int  CryptManager::TRKeyIntegrate3()
 {
 	int result;
 	signed int v1;
@@ -789,7 +789,7 @@ int __cdecl CryptManager::TRKeyIntegrate3()
 	return result;
 }
 
-int __cdecl CryptManager::sub_A7D470(int a1, int a2)
+int  CryptManager::sub_A7D470(int a1, int a2)
 {
 	int v3;
 	int v4;
@@ -799,7 +799,7 @@ int __cdecl CryptManager::sub_A7D470(int a1, int a2)
 	return this->DecStruct2_CEA1B0[a1].D1[16 * (a2 & 1 | ((a2 & 0x20) >> 4)) + ((a2 & 0x1F) >> 1)];
 }
 
-int __cdecl CryptManager::sub_A7D8D0_3(unsigned __int8 *DataP, unsigned __int8 *B_, unsigned __int8 *Out)
+int  CryptManager::sub_A7D8D0_3(unsigned __int8 *DataP, unsigned __int8 *B_, unsigned __int8 *Out)
 {
 	int result;
 	signed int v4;
@@ -837,7 +837,7 @@ int __cdecl CryptManager::sub_A7D8D0_3(unsigned __int8 *DataP, unsigned __int8 *
 	return result;
 }
 
-int __cdecl CryptManager::sub_A7D790(unsigned __int8 *a1, unsigned __int8 *a2)
+int  CryptManager::sub_A7D790(unsigned __int8 *a1, unsigned __int8 *a2)
 {
 	int result;
 	unsigned __int8 *v3;
@@ -871,7 +871,7 @@ int __cdecl CryptManager::sub_A7D790(unsigned __int8 *a1, unsigned __int8 *a2)
 	return result;
 }
 
-int __cdecl CryptManager::sub_A7D4B0(unsigned __int8 *a1, unsigned __int8 *a2)
+int  CryptManager::sub_A7D4B0(unsigned __int8 *a1, unsigned __int8 *a2)
 {
 	unsigned __int8 *v3;
 	int v4;
@@ -906,7 +906,7 @@ int __cdecl CryptManager::sub_A7D4B0(unsigned __int8 *a1, unsigned __int8 *a2)
 	return (int)(v10 + 1);
 }
 
-int __cdecl CryptManager::sub_A7D5E0_5(unsigned __int8 *p1, unsigned __int8 *p2)
+int  CryptManager::sub_A7D5E0_5(unsigned __int8 *p1, unsigned __int8 *p2)
 {
 	unsigned __int8 *v3;
 	unsigned __int8 *v4;
@@ -934,7 +934,7 @@ int __cdecl CryptManager::sub_A7D5E0_5(unsigned __int8 *p1, unsigned __int8 *p2)
 	return (int)(v3 + 1);
 }
 
-int __cdecl CryptManager::sub_A7DA60_4(unsigned __int8 *d, int idx, unsigned __int8 *a3)
+int  CryptManager::sub_A7DA60_4(unsigned __int8 *d, int idx, unsigned __int8 *a3)
 {
 	unsigned __int8 *v4;
 	unsigned __int8 v5[6];
@@ -958,7 +958,7 @@ int __cdecl CryptManager::sub_A7DA60_4(unsigned __int8 *d, int idx, unsigned __i
 	return sub_A7D790((unsigned __int8 *)a2, a3);
 }
 
-int __cdecl CryptManager::sub_A7DC90_3(int idx, unsigned char *m, unsigned char *m2)
+int  CryptManager::sub_A7DC90_3(int idx, unsigned char *m, unsigned char *m2)
 {
 	unsigned __int8 *v4;
 	unsigned __int8 *v5;
@@ -979,7 +979,7 @@ int __cdecl CryptManager::sub_A7DC90_3(int idx, unsigned char *m, unsigned char 
 	return (int)(v4 + 1);
 }
 
-unsigned int __cdecl CryptManager::sub_A7DE00_2(unsigned char *DataP1, unsigned char *DataP2)
+unsigned int  CryptManager::sub_A7DE00_2(unsigned char *DataP1, unsigned char *DataP2)
 {
 	unsigned int v4;
 	unsigned char v5[128+8];
@@ -1004,7 +1004,7 @@ unsigned int __cdecl CryptManager::sub_A7DE00_2(unsigned char *DataP1, unsigned 
 	return sub_A7D8D0_3(v7, OutputData_D1E4E8, DataP2);
 }
 
-int __cdecl CryptManager::sub_A7DFD0(unsigned __int8 *a1, unsigned __int8 *a2)
+int  CryptManager::sub_A7DFD0(unsigned __int8 *a1, unsigned __int8 *a2)
 {
 	unsigned char M2[128 + 8];
 	int idx;
@@ -1029,7 +1029,7 @@ int __cdecl CryptManager::sub_A7DFD0(unsigned __int8 *a1, unsigned __int8 *a2)
 	return sub_A7D8D0_3(v7, this->OutputData_D1E4E8, a2);
 }
 
-int __cdecl CryptManager::sub_A7E190_1(unsigned __int8 *Data, int Len, int State)
+int  CryptManager::sub_A7E190_1(unsigned __int8 *Data, int Len, int State)
 {
 	int result;
 	unsigned __int8 *DataP;
